@@ -6,6 +6,7 @@
     <title>front test</title>
     <link rel="stylesheet" href="index.css" />
     <script src="./slide.js"></script>
+    <script src="./plane.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
@@ -17,8 +18,7 @@
       integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
       crossorigin=""
     ></script>
-    <script src="bound.geojson"></script>
-    <script src="./index.js"></script>
+    <script src="./geomap.js"></script>
   </head>
   <body>
     <div class="main">
@@ -219,9 +219,8 @@
             class="reclame-image"
             alt="Офис в бизнес-центре 'TRIUMPH'"
           />
-    </div>
+        </div>
         <div class="reclame-bottom-stripe"></div>
-        
       </div>
     </div>
     <div class="location">
@@ -267,27 +266,32 @@
     </div>
     <div class="plane">
       <div class="container">
-        <h1 class="plane-title">типовая Планировка</h1>
-        <img src="./images/image61.png" alt="" />
+        <h1 class="plane-title">Типовая Планировка</h1>
+        <div class="plane-img-div">
+          <img src="./images/image61.png" alt="Clickable Image" id="clickImg" />
+        </div>
+        <div class="modal" id="modal">
+          <img src="./images/plane.jpeg" alt="Enlarged Image" />
+        </div>
       </div>
     </div>
     <div class="contactBlock">
       <div class="container">
         <div class="contact-content">
           <h1 class="contact-title">Свяжитесь с нами</h1>
-          <form action="#">
+          <form id="contactForm">
             <div class="form-inputs">
               <div class="form-field">
-                <img src="./images/user.svg" alt="" />
-                <input type="text" placeholder="Имя" id="" />
+                <img src="./images/user.svg" alt="User icon" />
+                <input type="text" placeholder="Имя" id="name" required />
               </div>
               <div class="form-field">
-                <img src="./images/phone.svg" alt="" />
-                <input type="tel" placeholder="(+996)" id="" />
+                <img src="./images/phone.svg" alt="Phone icon" />
+                <input type="tel" placeholder="(+996)" id="phone" required />
               </div>
             </div>
             <div class="privacy">
-              <img src="./images/Interface _ Lock.svg" alt="" />
+              <img src="./images/Interface _ Lock.svg" alt="Privacy icon" />
               <p>Мы обеспечиваем надежность Ваших персональных данных</p>
             </div>
             <button type="submit" class="submit-button">
@@ -301,12 +305,13 @@
         </div>
       </div>
     </div>
+
     <div class="footer">
       <div class="container">
         <div class="footer-content">
-          <form class="footer-form">
-            <input type="text" placeholder="Имя" />
-            <input type="tel" placeholder="(+996)" />
+          <form class="footer-form" id="contactForm">
+            <input type="text" id="name" placeholder="Имя" required />
+            <input type="tel" id="phone" placeholder="(+996)" required />
             <p class="footer-privacy">
               Мы обеспечиваем надежность Ваших персональных данных.
             </p>
@@ -323,7 +328,7 @@
               <strong>Навигация</strong>
               <ul>
                 <li><a href="#">О компании</a></li>
-                <li><a href="#">Объекты Bereke building</a></li>
+                <li><a href="#">Объекты Bereke <br> building</a></li>
                 <li><a href="#">Объекты BRK group</a></li>
                 <li><a href="#">Наши партнеры</a></li>
                 <li><a href="#">Контакты</a></li>
@@ -332,7 +337,7 @@
             <div>
               <strong>Связаться</strong>
               <ul>
-                <li>г. Бишкек, проспект Чынгыза Айтматова 24</li>
+                <li>г. Бишкек, проспект <br> Чынгыза Айтматова 24</li>
                 <li>+996 501 55 55 77</li>
                 <li>+996 550 55 55 77</li>
                 <li>+996 770 55 55 77</li>
@@ -341,9 +346,9 @@
             <div>
               <strong>Соц. сети</strong>
               <ul>
-                <li><img src="./images/facebook.png" alt=""></li>
-                <li><img src="./images/instagram.png" alt=""></li>
-                <li><img src="./images/youtube.png" alt=""></li>
+                <li><img src="./images/facebook.png" alt="" /></li>
+                <li><img src="./images/instagram.png" alt="" /></li>
+                <li><img src="./images/youtube.png" alt="" /></li>
               </ul>
             </div>
           </div>

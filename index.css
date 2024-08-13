@@ -548,10 +548,45 @@ body {
   padding-bottom: 40px;
 }
 
-.plane img {
+.plane-img-div img {
   width: 100vw;
   height: 1454.38px;
 }
+
+
+.plane .modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+
+.plane .modal.open {
+  display: block;
+}
+
+.plane .modal img {
+  width: 540px;
+  height: 571px;
+}
+
+.plane .close-btn {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  padding: 20px;
+  background: #000;
+  border: none;
+  font-size: 54px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
 
 .contactBlock {
   background: #000;
@@ -719,7 +754,7 @@ body {
 .footer-right {
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: 70px;
 }
 
 .footer-right nav strong,
@@ -734,21 +769,21 @@ body {
 }
 
 .footer-right ul li {
-  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .footer-right ul li a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-right ul li a:hover {
-  color: #ccc;
+  color: #03927e;
 }
 
 .footer-right img {
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   margin-right: 10px;
 }

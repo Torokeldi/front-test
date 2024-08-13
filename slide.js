@@ -1,63 +1,41 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const images = [
+    "./images/305660262_745875976504068_147389921780940005_n.jpg",
+    "./images/2023-06-29.jpg",
+    "./images/Triumph.png",
+    "./images/image60.png",
+    "./images/image61.png",
+    "./images/brk.png",
+  ];
 
-document.addEventListener('DOMContentLoaded', function() {
-    const prevButton = document.querySelector('.gallery-control-btn.arrow-left');
-    const nextButton = document.querySelector('.gallery-control-btn.arrow-right');
-    const galleryContent = document.querySelector('.gallery-content');
-    let currentIndex = 0;
-    const images = Array.from(galleryContent.querySelectorAll('img'));
-  
-    function updateGallery(index) {
-      galleryContent.style.transform = `translateX(-${index * 100}%)`;
-      currentIndex = index;
-    }
-  
-    prevButton.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        updateGallery(currentIndex - 1);
-      }
-    });
-  
-    nextButton.addEventListener('click', () => {
-      if (currentIndex < images.length - 1) {
-        updateGallery(currentIndex + 1);
-      }
-    });
-  });
-  
-  const planeTitle = document.querySelector('.plane-title');
-  const planeImage = document.querySelector('.plane img');
-  
-  planeTitle.addEventListener('click', () => {
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.innerHTML = `
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <img src="${planeImage.src}" alt="Типовая планировка" />
-      </div>
-    `;
-    document.body.appendChild(modal);
-  
-    modal.querySelector('.close').addEventListener('click', () => {
-      document.body.removeChild(modal);
-    });
-  });
-  
+  let index = 0;
 
-  
-  document.addEventListener('DOMContentLoaded', initializeMap);
+  const updateGallery = () => {
+    const [main, left, right] = [
+      ".large-image", 
+      ".left-overlay .small-image", 
+      ".right-overlay .small-image"
+    ].map(sel => document.querySelector(sel));
 
-  const contactForm = document.querySelector('.contactBlock form');
-  contactForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = contactForm.querySelector('input[type="text"]').value;
-    const phone = contactForm.querySelector('input[type="tel"]').value;
-  
-    if (name && phone) {
-      alert('Форма отправлена успешно!');
-      contactForm.reset();
-    } else {
-      alert('Пожалуйста, заполните все поля.');
-    }
-  });
-  
+    main.src = images[index];
+    left.src = images[(index - 1 + images.length) % images.length];
+    right.src = images[(index + 1) % images.length];
+
+    [main, left, right].forEach(img => {
+      img.style.opacity = 0;
+      setTimeout(() => img.style.opacity = 1, 200);
+    });
+  };
+
+  document.querySelector(".arrow-left").onclick = () => {
+    index = (index - 1 + images.length) % images.length;
+    updateGallery();
+  };
+
+  document.querySelector(".arrow-right").onclick = () => {
+    index = (index + 1) % images.length;
+    updateGallery();
+  };
+
+  updateGallery();
+});
