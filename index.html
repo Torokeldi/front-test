@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>front test</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="./slide.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+      integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+      integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+      crossorigin=""
+    ></script>
+    <script src="bound.geojson"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="header">
+          <div class="header-content">
+            <div class="header-menu">
+              <a href="#">О компании</a>
+              <a href="#">Объекты Bereke building</a>
+              <a href="#">Объекты BRK group</a>
+              <a href="#">Наши партнеры</a>
+              <a href="#">Контакты</a>
+            </div>
+            <div class="header-info">
+              <div class="address-info">
+                <img src="./images/Maps_place.svg" class="header-img" />
+                <p>г.Бишкек, проспект Чынгыза Айтматова 24</p>
+              </div>
+              <div class="divider"></div>
+              <div class="contact-info">
+                <div class="icon-wrapper">
+                  <img
+                    class="contact-icon"
+                    src="./images/phone.svg"
+                    class="header-img"
+                  />
+                </div>
+                <div class="phone-numbers">
+                  <p>(500) 500 500</p>
+                  <p>(500) 500 500</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="company-logo">
+          <div class="line"></div>
+          <p class="text">BRK GROUP</p>
+        </div>
+        <div class="company-title">
+          <p>Бизнес-центр</p>
+          <p>"TRIUMPH"</p>
+        </div>
+        <p class="due-date">Срок сдачи: 01.01.25</p>
+        <div class="company-description">
+          Бизнес-центр "TRIUMPH" идеально подходит для успешного делового
+          взаимодействия благодаря своему современному оборудованию, удобному
+          местоположению и высокому уровню обслуживания. Несмотря на свою
+          доступность, "TRIUMPH" занимает престижное место в городе за счет
+          использования качественных материалов и современных экологичных
+          технологий. Это помогает создать не только эстетичное, но и
+          экологически безопасное пространство.
+        </div>
+      </div>
+    </div>
+    <div class="characteristics-section">
+      <div class="сontainer">
+        <div class="characteristic-content">
+          <p class="section-title">Характеристики</p>
+          <div class="characteristics-grid">
+            <div class="characteristic-item" data-order="1">
+              <img
+                class="characteristic-icon"
+                src="./images/spacing-height-01.png"
+              />
+              <div class="characteristic-text">
+                <p class="characteristic-title">ВЫСОТА ПОТОЛКОВ</p>
+                <p class="characteristic-description">
+                  В чистовой отделке <br />1-й этаж - 4.8 м <br />со 2-го по
+                  16-й - 3.8 м
+                </p>
+              </div>
+            </div>
+            <div class="characteristic-item" data-order="2">
+              <img class="characteristic-icon" src="./images/floor-icon.svg" />
+              <div class="characteristic-text">
+                <p class="characteristic-title">Пол</p>
+                <p class="characteristic-description">
+                  Коммерция и типовой этаж: керамическая плита, ламинат<br />Паркинг
+                  - эпоксидный пол
+                </p>
+              </div>
+            </div>
+            <div class="characteristic-item" data-order="3">
+              <img class="characteristic-icon" src="./images/facade-icon.png" />
+              <div class="characteristic-text">
+                <p class="characteristic-title">ФАСАД</p>
+                <p class="characteristic-description">Композитный материал</p>
+              </div>
+            </div>
+            <div class="characteristic-item" data-order="4">
+              <img
+                class="characteristic-icon"
+                src="./images/insulation-icon.png"
+              />
+              <div class="characteristic-text">
+                <p class="characteristic-title">УТЕПЛИТЕЛЬ</p>
+                <p class="characteristic-description">
+                  Теплоизоляционная базальтовая плита плот. - 90 кг/м2 - 80 мм
+                </p>
+              </div>
+            </div>
+            <div class="characteristic-item" data-order="5">
+              <img class="characteristic-icon" src="./images/window.svg" />
+              <div class="characteristic-text">
+                <p class="characteristic-title">ОКНА</p>
+                <p class="characteristic-description">
+                  Алюминиевые премиум класса
+                </p>
+              </div>
+            </div>
+            <div class="characteristic-item" data-order="6">
+              <img class="characteristic-icon" src="./images/roof-icon.png" />
+              <div class="characteristic-text">
+                <p class="characteristic-title">КРОВЛЯ</p>
+                <p class="characteristic-description">Эксплуатируемая кровля</p>
+              </div>
+            </div>
+            <div class="characteristic-item" data-order="7">
+              <img
+                class="characteristic-icon"
+                src="./images/elevator-icon.png"
+              />
+              <div class="characteristic-text">
+                <p class="characteristic-title">ЛИФТ</p>
+                <p class="characteristic-description">Премиум класса</p>
+              </div>
+            </div>
+            <div class="characteristic-item" data-order="8">
+              <img
+                class="characteristic-icon"
+                src="./images/structure-icon.svg"
+              />
+              <div class="characteristic-text">
+                <p class="characteristic-title">КОНСТРУКЦИЯ</p>
+                <p class="characteristic-description">
+                  Железобетонный каркас монолитный
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="company-information">
+      <div class="container">
+        <div class="company-information-content">
+          <img
+            class="Triumph-image"
+            src="./images/Triumph.png"
+            alt="Бизнес Центр Triumph"
+          />
+          <div class="company-information-txt">
+            <div class="info-text-block">
+              <h1>БИЗНЕС ЦЕНТР "TRIUMPH"</h1>
+              <p class="info-subtitle">качество, доступность и статус</p>
+              <hr />
+              <p class="info-description">
+                Это выбор тех, кто ценит простоту в сочетании с лучшими
+                достижениями современной архитектуры. Оформление здания
+                выполнено с учетом последних тенденций модернизма, где каждая
+                деталь продумана для удобства и функциональности.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-bottom-stripe"></div>
+
+    <div class="reclame">
+      <div class="container">
+        <div class="reclame-content-wrapper">
+          <div class="reclame-text-section">
+            <h1 class="reclame-title">ИНВЕСТИРУЙТЕ В БУДУЩЕЕ</h1>
+            <hr />
+            <p class="reclame-description">
+              Офис в бизнес-центре "TRIUMPH" не просто представляет собой
+              площадь для работы, а является современным пространством, где
+              внимание уделено как функциональности, так и стилю. Каждый уголок
+              здесь продуман с учетом современных стандартов комфорта и
+              эффективности труда. Благодаря своему расположению в центре
+              делового района, бизнес-центр "TRIUMPH" обеспечивает легкий доступ
+              к транспортным магистралям, близость к ключевым предприятиям и
+              финансовым институтам.
+            </p>
+            <div class="reclame-quote">
+              <div class="reclame-quote-line"></div>
+              <p class="reclame-quote-text">
+                Этот офис не просто место работы, а стратегическая точка,
+                обеспечивающая эффективное функционирование и отличные
+                возможности для бизнеса.
+              </p>
+            </div>
+          </div>
+          <img
+            src="./images/image60.png"
+            class="reclame-image"
+            alt="Офис в бизнес-центре 'TRIUMPH'"
+          />
+    </div>
+        <div class="reclame-bottom-stripe"></div>
+        
+      </div>
+    </div>
+    <div class="location">
+      <div class="location-content">
+        <div class="location-text-block">
+          <p class="location-title">ЛОКАЦИЯ НОВЫЙ ЦЕНТР ГОРОДА</p>
+          <p class="location-subtitle">
+            Бизнес-центр "TRIUMPH" расположен по ул. Игембердиева, 8.
+          </p>
+        </div>
+
+        <hr />
+        <p class="location-description">
+          Центр города Бишкек является самым привлекательным и удобным для
+          работы местом. Удобная локация позволяет легко добираться как до
+          центра, так и до южной части города.
+        </p>
+      </div>
+    </div>
+    <div class="maps-content">
+      <div id="map"></div>
+    </div>
+    <div class="gallery-container">
+      <p class="gallery-title">Фотогалерея</p>
+      <div class="gallery-controls">
+        <button class="gallery-control-btn arrow-left">◄</button>
+        <button class="gallery-control-btn arrow-right">►</button>
+      </div>
+      <div class="gallery-content">
+        <div class="overlay-box left-overlay" style="left: 0">
+          <img src="./images/2023-06-29.jpg" class="small-image" />
+        </div>
+        <div class="main-image">
+          <img
+            src="./images/305660262_745875976504068_147389921780940005_n.jpg"
+            class="large-image"
+          />
+        </div>
+        <div class="overlay-box right-overlay" style="left: 1140px">
+          <img src="./images/Triumph.png" class="small-image" />
+        </div>
+      </div>
+    </div>
+    <div class="plane">
+      <div class="container">
+        <h1 class="plane-title">типовая Планировка</h1>
+        <img src="./images/image61.png" alt="" />
+      </div>
+    </div>
+    <div class="contactBlock">
+      <div class="container">
+        <div class="contact-content">
+          <h1 class="contact-title">Свяжитесь с нами</h1>
+          <form action="#">
+            <div class="form-inputs">
+              <div class="form-field">
+                <img src="./images/user.svg" alt="" />
+                <input type="text" placeholder="Имя" id="" />
+              </div>
+              <div class="form-field">
+                <img src="./images/phone.svg" alt="" />
+                <input type="tel" placeholder="(+996)" id="" />
+              </div>
+            </div>
+            <div class="privacy">
+              <img src="./images/Interface _ Lock.svg" alt="" />
+              <p>Мы обеспечиваем надежность Ваших персональных данных</p>
+            </div>
+            <button type="submit" class="submit-button">
+              <div class="button-circle">
+                <div class="circle"></div>
+                <p class="button-text">Отправить</p>
+              </div>
+              <div class="submit-arrow">►</div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <form class="footer-form">
+            <input type="text" placeholder="Имя" />
+            <input type="tel" placeholder="(+996)" />
+            <p class="footer-privacy">
+              Мы обеспечиваем надежность Ваших персональных данных.
+            </p>
+            <button type="submit" class="submit-button">
+              <div class="button-circle">
+                <div class="circle"></div>
+                <p class="button-text">Отправить</p>
+              </div>
+              <div class="submit-arrow" style="color: black">►</div>
+            </button>
+          </form>
+          <div class="footer-right">
+            <nav>
+              <strong>Навигация</strong>
+              <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Объекты Bereke building</a></li>
+                <li><a href="#">Объекты BRK group</a></li>
+                <li><a href="#">Наши партнеры</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div>
+              <strong>Связаться</strong>
+              <ul>
+                <li>г. Бишкек, проспект Чынгыза Айтматова 24</li>
+                <li>+996 501 55 55 77</li>
+                <li>+996 550 55 55 77</li>
+                <li>+996 770 55 55 77</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Соц. сети</strong>
+              <ul>
+                <li><img src="./images/facebook.png" alt=""></li>
+                <li><img src="./images/instagram.png" alt=""></li>
+                <li><img src="./images/youtube.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
