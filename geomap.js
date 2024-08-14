@@ -20,8 +20,6 @@ const osmHOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.pn
 });
 
 const greenIcon = L.icon({
-    iconUrl: 'leaf-green.png',
-    shadowUrl: 'leaf-shadow.png',
     iconSize: [38, 95],
     shadowSize: [50, 64],
     iconAnchor: [22, 94],
@@ -29,18 +27,11 @@ const greenIcon = L.icon({
     popupAnchor: [-3, -76]
 });
 
-L.marker([51.5, -0.09], { icon: greenIcon })
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+L.marker([42.861691234471536, 74.60331469678937], { icon: greenIcon })
+    .bindPopup('Triumph<br> best business.')
     .addTo(map);
 
     L.geoJson(adm).addTo(map);
-
-const littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
-    denver    = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
-    aurora    = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
-    golden    = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
-
-const cities = L.layerGroup([littleton, denver, aurora, golden]);
 
 const myStyle = {
     color: "#ff7800",
