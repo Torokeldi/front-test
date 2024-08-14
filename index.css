@@ -21,12 +21,13 @@
 
 body {
   overflow-x: hidden;
+  max-height: 6930px;
 }
 
 .container {
   width: 1440px;
   margin: 0 auto;
-  height: 100vh;
+  max-height: 6930px;
 }
 
 .main {
@@ -256,8 +257,8 @@ body {
 }
 
 .Triumph-image {
-  position: absolute;
-  left: -10px;
+  position: relative;
+  left: -190px;
   width: 850px;
   height: 541px;
 }
@@ -321,7 +322,7 @@ body {
 
 .reclame-content-wrapper {
   position: relative;
-  top: -387px;
+  top: 17px;
   display: flex;
   flex-direction: row;
 }
@@ -387,14 +388,14 @@ body {
   height: 20px;
   width: 100vw;
   position: relative;
-  top: -400px;
+  top: 20px;
   left: -200px;
 }
 
 .location {
   position: relative;
   left: 450px;
-  top: -560px;
+  top: 100px;
 }
 
 .location-content {
@@ -443,13 +444,13 @@ body {
   height: 458px;
   width: 100vw;
   position: relative;
-  top: -430px;
+  top: 190px;
 }
 
 .gallery-container {
   position: relative;
   left: 32%;
-  top: -400px;
+  top: 200px;
   width: 287px;
   display: inline-flex;
   flex-direction: column;
@@ -534,7 +535,7 @@ body {
 .plane {
   position: relative;
   left: -11%;
-  top: -100px;
+  top: 500px;
 }
 
 .plane-title {
@@ -585,8 +586,6 @@ body {
   color: #fff;
   cursor: pointer;
 }
-
-
 
 .contactBlock {
   background: #000;
